@@ -14,6 +14,10 @@ composer install
 ```
 
 编辑index.php中的数据库连接信息，运行即可导出
+
 ![Alt text](/1.png)
+
+导出样式：
+
 ![Alt text](/2.png)
 
