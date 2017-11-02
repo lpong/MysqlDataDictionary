@@ -1,5 +1,5 @@
 {
-  "name": "itxpp/mysql—dictionary",
+  "name": "itxpp/mysqldic",
   "description": "mysql数据字典导出工具",
   "type": "project",
   "keywords": [
