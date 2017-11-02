@@ -1,21 +1,22 @@
 {
-  "name": "itxpp/mysqldic",
-  "description": "mysql数据字典导出工具",
-  "type": "project",
-  "keywords": [
-    "mysql",
-    "数据字典",
-    "导出"
-  ],
-  "license": "MIT",
-  "authors": [
+    "name": "itxpp/mysqldic",
+    "description": "mysql数据字典导出工具",
+    "type": "project",
+    "keywords": [
+        "mysql",
+        "数据字典",
+        "导出"
+    ],
+    "license": "MIT",
+    "authors": [
     {
-      "name": "lea",
-      "email": "cotyxpp@qq.com"
-    }
-  ],
-  "require": {
-    "php": ">=5.4.0",
-    "phpoffice/phpexcel": "^1.8"
-  }
+        "name": "lea",
+        "email": "cotyxpp@qq.com"
+    }],
+    "require":
+    {
+        "php": ">=5.4.0",
+        "phpoffice/phpexcel": "^1.8"
+    },
+    "minimum-stability": "dev"
 }
