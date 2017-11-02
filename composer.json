@@ -1,0 +1,21 @@
+{
+  "name": "itxpp/mysql—dictionary",
+  "description": "the new thinkphp framework",
+  "type": "project",
+  "keywords": [
+    "mysql",
+    "数据字典",
+    "导出"
+  ],
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "lea",
+      "email": "cotyxpp@qq.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "phpoffice/phpexcel": "^1.8"
+  }
+}
