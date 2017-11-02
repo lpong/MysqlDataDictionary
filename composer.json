@@ -1,13 +1,13 @@
 {
   "name": "itxpp/mysql—dictionary",
-  "description": "the new thinkphp framework",
+  "description": "mysql数据字典导出工具",
   "type": "project",
   "keywords": [
     "mysql",
     "数据字典",
     "导出"
   ],
-  "license": "Apache-2.0",
+  "license": "MIT",
   "authors": [
     {
       "name": "lea",
