@@ -10,6 +10,10 @@
 使用 ` git ` 将代码clone到本地，进入项目然后运行
 
 ```
-composer update
+composer install
 ```
+
+编辑index.php中的数据库连接信息，运行即可导出
+![Alt text](/1.png)
+![Alt text](/2.png)
 
