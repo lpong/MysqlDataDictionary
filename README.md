@@ -19,5 +19,5 @@ composer install
 
 导出样式：
 
-![Alt text](/2.png)
+![Alt text](/3.png)
 
