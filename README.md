@@ -7,7 +7,7 @@
 ```
 - pdo_mysql
 ```
-使用 ` git ` 将代码clone到本地，进入项目然后运行
+使用 ` git ` 将代码` clone `到本地，进入项目然后运行
 
 ```
 composer install
