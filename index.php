@@ -9,13 +9,14 @@
 require './vendor/autoload.php';
 
 try {
-    $mysql = new PDO("mysql:host=localhost;dbname=JZPY", "root", "123456");
+    $mysql = new PDO("mysql:host=localhost;dbname=dbname", "root", "passwd");
     $mysql->query("SET NAMES utf8mb4");
+    $mysql->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     exit('数据库连接错误！错误信息：' . $e->getMessage());
 }
 //查看表
-$res    = $mysql->query('SHOW TABLE STATUS');
+$res    = $mysql->query('SHOW TABLE STATUS WHERE `Engine` != ""');
 $tables = [];
 while ($row = $res->fetch()) {
     array_push($tables, [
@@ -107,7 +108,7 @@ foreach ($tables as $key => $val) {
     $activeSheet->getStyle('B' . $start . ':I' . ($num-1))->applyFromArray($styleArray);
     $num++;
 }
-ob_end_clean();
+if (ob_get_contents()) ob_end_clean();
 header('Content-Type: application/vnd.ms-excel');
 header('Content-Disposition: attachment;filename="' . '数据字典-' . date('YmdHis') . '.xlsx"');
 header('Cache-Control: max-age=0');
