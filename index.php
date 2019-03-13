@@ -8,8 +8,23 @@
 
 require './vendor/autoload.php';
 
+$db_cfg = [
+    // 数据库类型
+    'type'     => 'mysql',
+    // 服务器地址
+    'hostname' => '192.168.33.10',
+    // 数据库名
+    'database' => 'mdw',
+    // 用户名
+    'username' => 'root',
+    // 密码
+    'password' => '123456',
+    // 端口
+    'hostport' => '3306',
+];
+
 try {
-    $mysql = new PDO("mysql:host=localhost;dbname=JZPY", "root", "123456");
+    $mysql = new PDO("{$db_cfg['type']}:host={$db_cfg['hostname']};dbname={$db_cfg['database']}", $db_cfg['username'], $db_cfg['password']);
     $mysql->query("SET NAMES utf8mb4");
 } catch (PDOException $e) {
     exit('数据库连接错误！错误信息：' . $e->getMessage());
@@ -71,7 +86,7 @@ $styleArray = [
     'borders' => [
         'allborders' => [
             //'style' => PHPExcel_Style_Border::BORDER_THICK,//边框是粗的
-            'style' => PHPExcel_Style_Border::BORDER_THIN,//细边框
+            'style' => PHPExcel_Style_Border::BORDER_THIN, //细边框
             //'color' => ['argb' => 'FFFF0000'],
         ],
     ],
@@ -104,12 +119,8 @@ foreach ($tables as $key => $val) {
         $activeSheet->setCellValue('I' . $num, $v['Comment']);
         $num++;
     }
-    $activeSheet->getStyle('B' . $start . ':I' . ($num-1))->applyFromArray($styleArray);
+    $activeSheet->getStyle('B' . $start . ':I' . ($num - 1))->applyFromArray($styleArray);
     $num++;
 }
-ob_end_clean();
-header('Content-Type: application/vnd.ms-excel');
-header('Content-Disposition: attachment;filename="' . '数据字典-' . date('YmdHis') . '.xlsx"');
-header('Cache-Control: max-age=0');
 $write = new PHPExcel_Writer_Excel2007($excel);
-$write->save('php://output');
+$write->save("数据字典".date('YmdHis').".xlsx");
