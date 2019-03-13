@@ -7,17 +7,15 @@
 ```
 - pdo_mysql
 ```
-使用 ` git ` 将代码` clone `到本地，进入项目然后运行
+使用 ` git ` 将代码` clone `到本地，进入项目然，设置数据库连接方式，然后运行
 
 ```
-composer install
+php index.php
 ```
 
-编辑index.php中的数据库连接信息，运行即可导出
-
-![Alt text](/1.png)
+![Alt text](/1.jpg)
 
 导出样式：
 
-![Alt text](/3.png)
+![Alt text](/3.jpg)
 
